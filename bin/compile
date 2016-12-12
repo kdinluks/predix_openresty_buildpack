@@ -54,7 +54,7 @@ mkdir -p openresty/nginx/cache/tmp
 
 if [[ -f Staticfile.auth ]]; then
   status "Enabling basic authentication"
-  mv Staticfile.auth nginx/conf/.htpasswd
+  mv Staticfile.auth openresty/nginx/conf/.htpasswd
   cat openresty/nginx/conf/.htpasswd | indent
   echo
   protip "Learn about basic authentication" "https://github.com/drnic/staticfile-buildpack#basic-authentication"
